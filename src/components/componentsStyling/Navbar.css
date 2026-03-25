@@ -1,0 +1,103 @@
+.navbarDiv{
+    display: grid;
+    grid-template-areas:
+    '. title login';
+    grid-template-columns:repeat(3, 1fr);
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    margin: 0px;
+    position: fixed;
+    top: 0px;
+}
+
+.navbarDiv > p {
+    grid-area: title;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+}
+.navbarDiv > p:hover{
+    cursor: pointer
+}
+
+.logInDiv{
+    grid-area: login
+}
+
+.dropdown {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdownContent {
+    visibility: hidden;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-top: 3rem;
+    z-index: 1;
+}
+
+#myDropdown{
+    display: grid;
+    grid-template-areas: 
+    'home'
+    'sign-out'
+    ;
+    grid-template-columns:1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: .5rem;
+}
+
+.dropdownHome{
+    grid-area: dropdownHome
+}
+
+.dropdownSafari{
+    grid-area: safari
+}
+
+.dropdownAcc{
+    grid-area: account
+}
+
+
+.dropdownSignout{
+    grid-area: sign-out
+}
+
+.material-symbols-outlined{
+    color: rgba(255, 255, 255, 1);
+    font-size: 36px;
+
+}
+
+.show {visibility:visible;}
+
+.accntBtn{
+    background-color: transparent;
+    border:none;
+    
+}
+
+.accntBtn:hover{
+    cursor: pointer;
+}
+
+.dropdownContent > button{
+    padding:7px 4px;
+    background-color: transparent;
+    border:none;
+}
+.dropdownContent > button:hover{
+    cursor: pointer;
+    background-color: #cdcbcb;
+    
+}
+a{
+    text-decoration: none;
+    color: black
+}

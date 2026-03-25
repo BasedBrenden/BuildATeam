@@ -1,0 +1,141 @@
+#mainContainer{
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-areas: 
+    '. view .';
+    
+}
+ 
+
+#signContainer{
+    grid-area: view;
+    margin-top: 1rem;
+    min-height:22rem;
+    min-width: 18rem;
+    border-radius: 6px;
+    background-color: white;
+    display: flex;
+    flex-flow: column;
+    row-gap: 1.5rem;
+    padding: 0 2rem;
+    box-shadow: 0px 0px 7px black;
+}
+
+#signContainer > h1{
+    color: black;
+    padding: 0%;
+}
+
+#signContainer > input{
+
+    margin: 0 2rem;
+    height: 1.5rem;
+    border-radius: 3px;
+}
+
+#signContainer > input:focus{
+    box-shadow: 1px 1px 18px rgb(118, 197, 0);
+}
+
+#signContainer > button {
+    border: none;
+    border-radius: 6px;
+    
+    height: 3rem;
+    color: white;
+    
+    
+    font-weight: 600;
+}
+
+#signContainer > button:hover{
+    cursor: pointer;
+}
+
+#signContainer > span{
+    text-align: center;
+    background-color:rgba(247, 72, 72, 0.629);
+    width: 75%;
+    border-radius: 5px;
+    margin: auto;
+    color: rgb(118, 18, 18);
+}
+
+
+hr{
+    color: grey;
+    background-color: black;
+    height: .5px;
+    width: 100%;
+    
+}
+
+
+#signInLink{
+    margin:auto;
+}
+
+#signInLink> a{
+    text-align: center;
+    color:blue;
+    font-weight: 600;
+    margin: 0px auto;
+    width: 100%;
+}
+
+a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#logInBtn{
+    background-color: rgb(24, 119, 242);
+    width: 100%;
+}
+
+#guestBtn{
+    background-color:rgb(196, 43, 43);
+    width: 90%;
+    margin: auto;
+}
+
+#logInBtn:hover{
+    animation: logInHover .5s;
+    background-color: rgb(22, 102, 208)
+}
+
+#guestBtn:hover{
+    animation: guestHover .5s;
+    background-color: rgb(118, 18, 18);
+}
+
+
+
+@keyframes createHover {
+    from{ background-color: rgb(69, 192, 69);}
+    to {background-color: rgb(26, 135, 26);}
+}
+
+@keyframes logInHover {
+    from{ background-color: rgb(24, 119, 242);}
+    to {background-color: rgb(22, 102, 208);}
+}
+
+@keyframes guestHover {
+    from{ background-color: rgb(196, 43, 43);}
+    to {background-color: rgb(118, 18, 18);}
+}
+
+#createBtn{
+    width: 75%;
+    margin:auto;
+    margin-bottom: 20px;
+    background-color: rgb(69, 192, 69);
+}
+
+#createBtn:hover{
+    animation-name: createHover;
+    animation-duration: .5s;
+    background-color: rgb(26, 135, 26);
+    
+}

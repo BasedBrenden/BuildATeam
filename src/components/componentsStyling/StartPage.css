@@ -1,0 +1,46 @@
+.startContainer{
+    display: grid;
+    background-image: url("../../images/landing2.gif");
+    background-size: 100% 100%;
+    height: 100vh;
+    grid-template-areas:
+    '. startWelcome .'
+    '. startSignIn .'
+    '. . .';
+    grid-template-rows: .20fr 1fr 1fr;
+}
+
+.startWelcome{
+    grid-area: startWelcome;
+    text-align: center;
+}
+
+.startWelcome > h2{
+    color: rgb(250, 255, 235);
+}
+
+.startSignIn{
+    grid-area: startSignIn;
+}
+
+
+
+
+@media (min-width:1200px){
+
+    .startContainer{
+        display: grid;
+        grid-template-areas:
+        '. . . .'
+        '. startWelcome startSignIn .'
+        '. . . .';
+        grid-template-rows: .20fr 1fr 1fr;
+    }
+
+    .startWelcome{
+        grid-area: startWelcome;
+        text-align: left;
+    }
+
+    
+}

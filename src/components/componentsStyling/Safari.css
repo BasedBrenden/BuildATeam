@@ -1,0 +1,268 @@
+.safariContainer{
+    display: grid;
+    grid-template-areas:
+    '. . .'
+    '. main .';
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .15fr 1fr;
+    height: 100%;
+}
+
+
+
+.mainContainer{
+    grid-area: main;
+    display: grid;
+    grid-template-areas: 
+    '. pokeView .'
+    '. optionsView .'
+    '. caughtTeam .';
+    width: 600px;
+    height: 1000px;
+    background-color: white;
+    grid-template-rows: 35% 45% 20%;
+    text-align: center;
+    margin: auto;
+    
+}
+
+#pokeSprite{
+    width: 30%;
+}
+.safariView > h1{
+    color: black
+}
+
+.safariView{
+    grid-area: pokeView;
+}
+
+.caughtTeam{
+  grid-area: caughtTeam;
+  display: flex;
+  align-items:  flex-start;
+  justify-items: center;
+}
+
+.caughtPokemon{
+  margin: 0 2%;
+}
+
+.pokeball {
+    height: 25px;
+    width: 25px;
+    background: linear-gradient(180deg, rgb(255, 0, 0) 50%, rgb(255, 255, 255)50%);
+    border-radius: 50% 50% 50%;
+    border:1px solid black;
+    position: relative;
+    animation: throw .50s linear forwards;
+    display: inline-block;
+}
+
+.rock {
+    width: 25px;
+    height: 25px;
+    border-radius: 50% 50% 30% 30%;
+    border:1px solid black;
+    background-color: grey;
+    position: relative;
+    display: inline-block;
+    animation: throw .50s linear forwards;
+    transform: rotate(-45deg);
+}
+
+
+.bait{
+    width: 25px;
+    height: 25px;
+    border-radius: 50% 50% 30% 30%;
+    border:1px solid black;
+    background-color: rgb(115, 219, 238);
+    position: relative;
+    display: inline-block;
+    animation: throw .50s linear forwards;
+    transform: rotate(-45deg);
+}
+
+
+.optionsView{
+    grid-area: optionsView;
+    display: grid;
+    grid-template-areas:
+    'prompt prompt'
+    'pokeball bait'
+    'rock run';
+    background-color: beige;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .75fr 1fr 1fr;
+    border: 6px solid rgb(102, 102, 248);
+    border-radius: 12px;
+    width: 32rem;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.optionsView > .btnContainer{
+    margin: 8px;
+    border-radius: 12px;
+    border: 3px solid black;
+}
+
+.optionsView > .btnContainer > button:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.optionsView > .btnContainer > button{
+    margin: 1px;
+    width: 99%;
+    height: 99%;
+    border-radius: 12px;
+    color: white;
+    font-weight:bolder;
+    font-family: 'helvetica neue'
+}
+
+#prompt{
+    grid-area: prompt;
+    word-wrap: break-word;
+    
+}
+
+#btnBall{
+    background: linear-gradient(180deg, rgb(227, 53, 13) 50%, rgb(112, 27, 7) 50%);
+    grid-area: pokeball;
+}
+
+#btnBait{
+    grid-area: bait;
+    background: linear-gradient(180deg, rgb(0, 117, 190) 50%, rgb(7, 71, 110) 50%);
+    
+}
+
+#btnRock{
+    grid-area: rock;
+    background: linear-gradient(180deg, rgb(230, 188, 47) 50%, rgb(124, 102, 27) 50%);
+}
+
+#btnRun{
+    grid-area: run;
+    background: linear-gradient(180deg, rgb(77, 173, 91) 50%, rgb(40, 90, 48) 50%);
+}
+
+
+
+.dot-flashing {
+    position: relative;
+    width: 11px;
+    height: 11px;
+    border-radius: 5px;
+    background-color: #9880ff;
+    color: #9880ff;
+    animation: dot-flashing 1s infinite linear alternate;
+    animation-delay: 0.5s;
+  }
+  .dot-flashing::before, .dot-flashing::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+  }
+  .dot-flashing::before {
+    left: -15px;
+    width: 11px;
+    height: 11px;
+    border-radius: 5px;
+    background-color: #9880ff;
+    color: #9880ff;
+    animation: dot-flashing 1s infinite alternate;
+    animation-delay: 0s;
+  }
+  .dot-flashing::after {
+    left: 15px;
+    width: 11px;
+    height: 11px;
+    border-radius: 5px;
+    background-color: #9880ff;
+    color: #9880ff;
+    animation: dot-flashing 1s infinite alternate;
+    animation-delay: 1s;
+  }
+  
+
+  .shrinkSprite{
+    animation: shrinkSprite 1s linear forwards;
+  }
+
+  .growSprite{
+    animation: growSprite 1s linear forwards;
+  }
+  @keyframes dot-flashing {
+    0% {
+      background-color: #9880ff;
+    }
+    50%, 100% {
+      background-color: rgba(152, 128, 255, 0.2);
+    }
+  }
+
+  @keyframes throw {
+    0% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(50px) rotate(45deg);
+    }
+    50% {
+      transform: translateY(100px) rotate(90deg);
+    }
+    75% {
+      transform: translateY(150px) rotate(135deg);
+    }
+    90% {
+      transform: translateY(175px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(200px) rotate(360deg);
+    }
+    }
+
+    @keyframes shrinkSprite {
+        
+        25% {
+            width: 22.5%;
+            height: 75%
+          }
+        50% {
+            width: 15%;
+            height: 50%
+          }
+        75% {
+            width: 7.5%;
+            height: 25%    
+          }
+        100% {
+            width: 0%;
+            height: 0%
+          }
+    }
+
+    @keyframes growSprite {
+        0%{
+            width:0%;
+            height: 0%
+        }
+        50% {
+            width: 7.5%;
+            height: auto
+          }
+        75% {
+            width: 15%;
+            height: auto    
+          }
+        100% {
+            width: 30%;
+            height: auto
+          }
+    }

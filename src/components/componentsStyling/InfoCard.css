@@ -1,0 +1,196 @@
+.infoCardContainer{
+    display: grid;
+    grid-template-areas: 
+    'name pokeId'
+    'types types'
+    'pokeSprite pokeSprite'
+    'typesComp abilities'
+    ;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 12px;
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    color: white;
+    font-size: large;
+}
+
+
+
+.pokeCardName{
+    grid-area: name;
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.pokeCardId{
+    grid-area: pokeId;
+    text-align: right;
+    justify-self: end;
+    margin-right: 5%;
+}
+
+.pokeCardMainTypes{
+    grid-area: types;
+    display: flex;
+}
+
+.infoImage{
+    grid-area: pokeSprite;
+    width: 37%;
+    height: auto;
+    margin: auto;
+}
+
+.infoImage:hover{
+    transform: scale(1.1);
+}
+
+#infoStatsAdv{
+    
+    display: flex;
+    flex-flow: column;
+    margin: auto;
+    text-align: center;
+    color: black;
+    font-size: medium;
+    height: 100%;
+}
+
+.pokeCardTypesComp{
+    grid-area: typesComp;
+}
+
+
+
+.pokeCardMainTypes > .types{
+    border: 1px solid black;
+    border-radius: 6px;
+    color: white;
+    width: 5rem;
+    text-align: center;
+    padding: .5rem 0%.5rem 0%;
+    margin: 0%;
+    margin-left: 10px;
+}
+
+.typesContainer{
+    
+    width: 100%;
+    height: 60%;
+    overflow-x: auto;
+  
+}
+
+.typesContainer > .types{
+    margin: auto;
+}
+
+
+#infoAbility{
+    grid-area: abilities;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#infoAbility > div > h2{
+    text-align: center;
+    font-size: x-large;
+}
+
+.abilityTitle{
+    display: flex;
+    justify-content: center;
+}
+
+.abilityButton{
+    border: 1px solid rgb(0, 110, 255);
+    border-radius: 24px;
+    font-size: small;
+    width: 50%;
+    margin: 3%;
+    margin-bottom: 4%;
+    margin-top: 2%;
+    
+}
+
+.abilityButton:hover{
+    background-color:rgb(0, 110, 255);
+    color: white;
+}
+
+
+#abilityDescription{
+    height: 8rem;
+    margin-right: 5%;
+}
+
+#abilityDescription>p{
+    margin-top: 2%;
+}
+
+#carousel{
+    color:rgb(24, 235, 242)
+}
+
+#carouselNot{
+    color:rgb(24, 126, 242)
+}
+
+#carousel:hover{
+    cursor: pointer;
+}
+
+#carouselNot:hover{
+    cursor: pointer;
+}
+
+@media (min-width: 500px) {
+
+    #infoAbility{
+        grid-area: abilities;
+        color: black
+    }
+
+    .types{
+        border: 1px solid black;
+        border-radius: 6px;
+        color: white;
+        width: 7rem;
+        text-align: center;
+        margin-left: 1rem;
+    }
+
+    .infoImage{
+        grid-area: pokeSprite;
+        width: 37%;
+        height: auto;
+        margin: auto;
+    }
+    
+}
+
+@media(max-width: 500px){
+
+    .types{
+        border: 1px solid black;
+        border-radius: 6px;
+        padding: .5rem 1.5rem;
+        color: white;
+        width: 3rem;
+        text-align: center;
+        font-size: smaller;
+    }
+
+    .infoImage{
+        grid-area: pokeSprite;
+        width: 37%;
+        height: auto;
+        margin: auto;
+    }
+    
+}
+
