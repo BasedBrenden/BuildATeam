@@ -1,7 +1,6 @@
 # Build-A-Team
-## Link to Build-A-Team backend
-https://github.com/BasedBrenden/batBackEnd
 
+[Click here to get started!](https://apollobat-a73ab.web.app/)
 A full-stack web app by Brenden Thomas that lets users build and manage a custom 6-Pokémon team. Features include secure authentication, persistent team storage, and a downloadable team image generator for printing on items like debit or credit cards. This project highlights skills in authentication, database design, and image generation, while delivering a fun and interactive user experience.
 
 ![bat2](https://github.com/BasedBrenden/Build-a-Team2/assets/19752877/59b2b833-a805-41f3-9bfc-1653b94def33)
